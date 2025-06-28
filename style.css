@@ -1,0 +1,76 @@
+/* General settings */
+
+html {
+  font-size: 8px;
+}
+
+/* Small elements */
+.sound_box,
+.beat_box {
+  border-radius: 1rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.instrument {
+  border-radius: 1rem;
+  width: 8rem;
+  height: 5rem;
+  background-color: #5b6065;
+}
+
+.sound_box {
+  background-color: #5b6065;
+}
+
+.beat_box {
+  background-color: #546a78;
+}
+
+/* Hover */
+
+.instrument:hover {
+  background-color: #7d8389;
+}
+
+.sound_box:hover {
+  background-color: #7d8389;
+}
+
+.beat_box:hover {
+  background-color: #748e9f;
+}
+
+/* Bigger containers */
+
+#beat_board {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.beat {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+#time_scale {
+  text-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #5b6065;
+  border-radius: 1rem;
+}
+
+#time_scale > * {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  font-family: "Roboto";
+}
