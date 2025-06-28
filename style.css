@@ -4,12 +4,32 @@ html {
   font-size: 8px;
 }
 
+h5 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
 /* Small elements */
-.sound_box,
-.beat_box {
+
+.beat :nth-child(4n + 1) {
+  background-color: #546a78;
+}
+.beat :nth-child(4n + 1):hover {
+  background-color: #748e9f;
+}
+
+.sound_box {
   border-radius: 1rem;
   width: 5rem;
   height: 5rem;
+}
+
+/* This is how to select an element with two classes */
+div.sound_box.active {
+  background-color: green;
 }
 
 .instrument {
@@ -23,10 +43,6 @@ html {
   background-color: #5b6065;
 }
 
-.beat_box {
-  background-color: #546a78;
-}
-
 /* Hover */
 
 .instrument:hover {
@@ -37,21 +53,19 @@ html {
   background-color: #7d8389;
 }
 
-.beat_box:hover {
-  background-color: #748e9f;
-}
-
 /* Bigger containers */
 
 #beat_board {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow-x: auto;
 }
 .row {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  width: max-content;
 }
 
 .beat {
@@ -62,7 +76,7 @@ html {
 
 #time_scale {
   text-align: center;
-  align-items: center;
+  align-content: center;
   gap: 0.5rem;
   background-color: #5b6065;
   border-radius: 1rem;
@@ -73,4 +87,10 @@ html {
   color: white;
   font-weight: 600;
   font-family: "Roboto";
+}
+
+.time_scale {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }

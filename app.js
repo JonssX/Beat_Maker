@@ -9,21 +9,19 @@ const kickOne = audioContext.createMediaElementSource(kickOneSound);
 kickOne.connect(audioContext.destination);
 
 // Test playing
-const kickInstrument = document.getElementById("kick_instrument");
+const kickInstrument = document.getElementById("instrument_kick");
 
 kickInstrument.addEventListener("click", () => {
   kickOneSound.play();
 });
 
-// Jak nałożyć granie na każdy z elementów?
-// const beatBox = document.getElementsByClassName("beat_box");
+const soundBox = document.querySelectorAll(".sound_box");
+console.log(soundBox);
 
-// const iterate = () => {
-//   for (let i; i < beatBox.length; i++) {
-//     beatBox[i].addEventListener("click", () => {
-//       kickOneSound.play();
-//     });
-//   }
-// };
-
-// iterate();
+// This is how to add something to all of the elements!!!
+soundBox.forEach((box) => {
+  box.addEventListener("click", () => {
+    kickOneSound.play();
+    box.classList.toggle("active");
+  });
+});
