@@ -7,7 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="app.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beat Maker</title>
@@ -15,7 +15,12 @@
   <body>
     <div class="container" id="beat_board">
       <div class="row">
-        <div class="instrument"></div>
+        <div
+          class="instrument"
+          id="kick_instrument"
+          data-playing="false"
+          role="switch"
+        ></div>
         <div class="beat">
           <div class="beat_box"></div>
           <div class="sound_box"></div>
@@ -141,5 +146,11 @@
         </div>
       </div>
     </div>
+    <audio
+      src="https://upload.wikimedia.org/wikipedia/commons/3/37/Kick_7_%28Gravity_Sound%29.wav"
+      id="kick_one_sound"
+    ></audio>
+
+    <script src="app.js"></script>
   </body>
 </html>
